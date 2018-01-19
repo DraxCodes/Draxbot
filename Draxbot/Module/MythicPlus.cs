@@ -31,7 +31,7 @@ namespace Draxbot.Module
             var builderMP = new EmbedBuilder() { Title = $"Mythic+ Data For {mPlusData.Name} | {mPlusData.Race} {mPlusData.SpecName} {mPlusData.Class} | {mPlusData.CharGear.EquipedILVL} ILVL", Url = mPlusData.RaiderIO_URL }
                 .WithFooter($"Powered by Draxbot & Raider.IO | {DateTime.UtcNow}")
                 .WithThumbnailUrl(mPlusData.ThumbnailURL)
-                .AddField($"Current Rating", mPlusData.CurrentMythicPlusScore.dps.ToString() , true);
+                .AddField($"Current Rating", mPlusData.CurrentMythicPlusScore.all.ToString() , true);
 
 
             foreach (var d in mPlusData.HighestEverMythicPlus)
