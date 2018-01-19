@@ -12,9 +12,10 @@ using Discord.WebSocket;
 
 namespace Draxbot.Module
 {
+    [Group("mplus")]
     public class MythicPlus : ModuleBase<SocketCommandContext>
     {
-        [Command("mplus")]
+        [Command("highest")]
         [Summary("Finds the characters WOW Stats.")]
         public async Task _MythicPlus(string s, [Optional] string server)
         { 
@@ -27,12 +28,15 @@ namespace Draxbot.Module
             jsonData = new WebClient().DownloadString(jsonDataUrl);
             Character mPlusData = JsonConvert.DeserializeObject<Character>(jsonData);
 
-            var builderMP = new EmbedBuilder() { Title = $"Mythic+ Data For {s}", Url = mPlusData.RaiderIO_URL};
-            builderMP.WithFooter($"Powered by Draxbot & Raider.IO | {DateTime.UtcNow}");
+            var builderMP = new EmbedBuilder() { Title = $"Mythic+ Data For {mPlusData.Name} | {mPlusData.Race} {mPlusData.SpecName} {mPlusData.Class} | {mPlusData.CharGear.EquipedILVL} ILVL", Url = mPlusData.RaiderIO_URL }
+                .WithFooter($"Powered by Draxbot & Raider.IO | {DateTime.UtcNow}")
+                .WithThumbnailUrl(mPlusData.ThumbnailURL)
+                .AddField($"Current Rating", mPlusData.CurrentMythicPlusScore.dps.ToString() , true);
+
 
             foreach (var d in mPlusData.HighestEverMythicPlus)
             {
-                builderMP.AddField($"[{d.short_name}]({d.url}) +{d.mythic_level}", null , true);
+                builderMP.AddField($"{d.short_name} +{d.mythic_level}", $"[+{d.num_keystone_upgrades} Chest | Link]({d.url})" , true);
             }
 
             builderMP.Build(); await ReplyAsync("", false, builderMP);
