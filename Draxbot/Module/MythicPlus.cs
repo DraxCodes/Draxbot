@@ -27,7 +27,7 @@ namespace Draxbot.Module
             jsonData = new WebClient().DownloadString(jsonDataUrl);
             Character mPlusData = JsonConvert.DeserializeObject<Character>(jsonData);
 
-            var builderMP = new EmbedBuilder() { Title = $"Mythic+ Data For {s}", /*Description = $"Mythic+ Data Up To Date As Of {DateTime.UtcNow}",*/ Url = mPlusData.RaiderIO_URL};
+            var builderMP = new EmbedBuilder() { Title = $"Mythic+ Data For {s}", Url = mPlusData.RaiderIO_URL};
             builderMP.WithFooter($"Powered by Draxbot & Raider.IO | {DateTime.UtcNow}");
 
             foreach (var d in mPlusData.HighestEverMythicPlus)
