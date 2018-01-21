@@ -22,6 +22,7 @@ namespace Draxbot.Module
             if (server == null) server = "draenor";
             var user = Context.User as SocketGuildUser;
             Bot.CommandLog(user.Username, $"Mythic+ Stats for {s}");
+            await Context.Channel.TriggerTypingAsync();
 
             string jsonDataUrl = ($"https://raider.io/api/v1/characters/profile?region=eu&realm={server}&name={s}&fields=mythic_plus_highest_level_runs%2Cgear%2Cguild%2Cmythic_plus_scores%2Cmythic_plus_ranks%2Cmythic_plus_recent_runs%2Cmythic_plus_best_runs%2Cmythic_plus_weekly_highest_level_runs%2Cprevious_mythic_plus_scores");
             string jsonData = null;
