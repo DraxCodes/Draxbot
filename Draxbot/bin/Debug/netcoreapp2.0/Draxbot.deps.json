@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "402564b899d643e87e4a91dd73e7aa8bb3a1eb9c"
+    "signature": "572ee03364aa7d7760999a313ebd93cd83d3b017"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,7 +12,8 @@
           "Discord.Net": "1.0.2",
           "Discord.Net.Commands": "1.0.2",
           "Discord.Net.Core": "1.0.2",
-          "Discord.Net.WebSocket": "1.0.2"
+          "Discord.Net.WebSocket": "1.0.2",
+          "LiteDB": "4.1.1"
         },
         "runtime": {
           "Draxbot.dll": {}
@@ -92,6 +93,16 @@
         },
         "runtime": {
           "lib/netstandard1.3/Discord.Net.WebSocket.dll": {}
+        }
+      },
+      "LiteDB/4.1.1": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Threading.Thread": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -1038,6 +1049,11 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Threading.Thread/4.0.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Threading.ThreadPool/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0",
@@ -1146,6 +1162,13 @@
       "sha512": "sha512-18TAK7E8iOYv6GRkaJwkI0SCfp6iB/YZ3c6ToW70RwoFV0nlBLfphzH1r4BL76YvYg5yt1NHAoglGNjn5URamQ==",
       "path": "discord.net.websocket/1.0.2",
       "hashPath": "discord.net.websocket.1.0.2.nupkg.sha512"
+    },
+    "LiteDB/4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CUZa6ejPI4VUe5vRsx+xURq52j46aELaJaftu/etratqmy6YiyjObjB5Tzg7EAjWFKj0ZYiJXo3eEBXS5MCqow==",
+      "path": "litedb/4.1.1",
+      "hashPath": "litedb.4.1.1.nupkg.sha512"
     },
     "Microsoft.CSharp/4.3.0": {
       "type": "package",
@@ -1727,6 +1750,13 @@
       "sha512": "sha512-npvJkVKl5rKXrtl1Kkm6OhOUaYGEiF9wFbppFRWSMoApKzt2PiPHT2Bb8a5sAWxprvdOAtvaARS9QYMznEUtug==",
       "path": "system.threading.tasks.extensions/4.3.0",
       "hashPath": "system.threading.tasks.extensions.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Thread/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gIdJqDXlOr5W9zeqFErLw3dsOsiShSCYtF9SEHitACycmvNvY8odf9kiKvp6V7aibc8C4HzzNBkWXjyfn7plbQ==",
+      "path": "system.threading.thread/4.0.0",
+      "hashPath": "system.threading.thread.4.0.0.nupkg.sha512"
     },
     "System.Threading.ThreadPool/4.3.0": {
       "type": "package",

@@ -11,6 +11,7 @@
     <PackageReference Include="Discord.Net.Commands" Version="1.0.2" />
     <PackageReference Include="Discord.Net.Core" Version="1.0.2" />
     <PackageReference Include="Discord.Net.WebSocket" Version="1.0.2" />
+    <PackageReference Include="LiteDB" Version="4.1.1" />
   </ItemGroup>
 
 </Project>
