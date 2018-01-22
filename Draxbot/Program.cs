@@ -7,6 +7,9 @@ using Discord.Addons.Interactive;
 using System.Reflection;
 using Discord.Commands;
 using Microsoft.Extensions.DependencyInjection;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Draxbot
 {
@@ -25,7 +28,7 @@ namespace Draxbot
 
         public async Task StartAsynq()
         {
-            _token = "MzY5MTYyMjg0Mzg1NDM1NjY5.DNEwkA.AUpXGk1Lg4QDLPcF0WYBwzO0stM";
+            _token = File.ReadAllText("./token.txt"); 
             _client = new DiscordSocketClient(new DiscordSocketConfig { LogLevel = LogSeverity.Verbose });
             _client.Log += Log;
 
@@ -74,8 +77,9 @@ namespace Draxbot
             else
             {
                 Console.WriteLine("{0} {1} requested {2}", DateTime.Now, user, command);
-                
+
             }
         }
     }
 }
+   
