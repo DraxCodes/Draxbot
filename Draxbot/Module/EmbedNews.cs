@@ -102,111 +102,223 @@ namespace Draxbot.Module
             }
             builder.Build(); await channel.SendMessageAsync("", false, builder);
         }
-        [Command("raid", RunMode = RunMode.Async)]
-        public async Task RaidEvent()
+
+
+        [Group("raid")]
+        public class EmbedNewsRaid : InteractiveBase
         {
-            TimeSpan timeOut = TimeSpan.FromSeconds(60);
-            var channel = (ITextChannel)Context.Client.GetChannel(405383843370106880);
-            string guide; bool error = false;
-            await ReplyAsync("Enter Raid (EN, NH, TOS, Antorus) TOV Not Supported!");
-            var raid = await NextMessageAsync(timeout: timeOut);
-            await ReplyAsync("Enter Date of raid (Example: Monday 22nd Jan)");
-            var date = await NextMessageAsync(timeout: timeOut);
-            await ReplyAsync("Enter time of raid (Example 8pm)");
-            var time = await NextMessageAsync(timeout: timeOut);
-            var legion = Context.Guild.Emotes.First(x => x.Name == "legion");
+            [Command("main", RunMode = RunMode.Async)]
+            public async Task RaidEvent()
+            {
+                TimeSpan timeOut = TimeSpan.FromSeconds(60);
+                var channel = (ITextChannel)Context.Client.GetChannel(405383843370106880);
+                string guide; bool error = false;
+                await ReplyAsync("Enter Raid (EN, NH, TOS, Antorus) TOV Not Supported!");
+                var raid = await NextMessageAsync(timeout: timeOut);
+                await ReplyAsync("Enter Date of raid (Example: Monday 22nd Jan)");
+                var date = await NextMessageAsync(timeout: timeOut);
+                await ReplyAsync("Enter time of raid (Example 8pm)");
+                var time = await NextMessageAsync(timeout: timeOut);
+                var legion = Context.Guild.Emotes.First(x => x.Name == "legion");
 
-            var builder = new EmbedBuilder()
-                .WithTitle($"{legion} New Raid Event Started by {Context.User.Username}")
-                .WithDescription("All Radiers in the Main Raid Team are REQUIRED to join!")
-                .WithTimestamp(DateTime.UtcNow)
-                .WithFooter("Powered by Draxbot | Wont Display Correctly on Mobile")
-                .AddField("Raid:", "**Date:**", true);
+                var builder = new EmbedBuilder()
+                    .WithTitle($"{legion} New Raid Event Started by {Context.User.Username}")
+                    .WithDescription("All Radiers in the Main Raid Team are REQUIRED to join!")
+                    .WithTimestamp(DateTime.UtcNow)
+                    .WithFooter("Powered by Draxbot | Wont Display Correctly on Mobile")
+                    .AddField("Raid:", "**Date:**", true);
 
-#region Raid Switch
-            switch (raid.ToString().ToUpper())
-            {
-                case "EN":
-                    builder.AddField("Emerald Nightmare", $"**{date} | {time}**", true);
-                    guide = "EN";
-                    break;
-                case "NH":
-                    builder.AddField("Nighthold", $"**{date} | {time}**", true);
-                    guide = "NH";
-                    break;
-                case "TOS":
-                    builder.AddField("Tomb Of Sargaras", $"**{date} | {time}**", true);
-                    guide = "TOS";
-                    break;
-                case "ANTORUS":
-                    builder.AddField("Antorus The Burning Throne", $"**{date} | {time}**", true);
-                    guide = "Antorus";
-                    break;
-                default:
-                    guide = "none";
-                    error = true;
-                    break;
-            }
-            #endregion
-            builder.AddField("Can't Make it?", "**Need Help?**", true);
+                #region Raid Switch
+                switch (raid.ToString().ToUpper())
+                {
+                    case "EN":
+                        builder.AddField("Emerald Nightmare", $"**{date} | {time}**", true);
+                        guide = "EN";
+                        break;
+                    case "NH":
+                        builder.AddField("Nighthold", $"**{date} | {time}**", true);
+                        guide = "NH";
+                        break;
+                    case "TOS":
+                        builder.AddField("Tomb Of Sargaras", $"**{date} | {time}**", true);
+                        guide = "TOS";
+                        break;
+                    case "ANTORUS":
+                        builder.AddField("Antorus The Burning Throne", $"**{date} | {time}**", true);
+                        guide = "Antorus";
+                        break;
+                    default:
+                        guide = "none";
+                        error = true;
+                        break;
+                }
+                #endregion
 
-#region Link Switch
-            switch (guide.ToLower())
-            {
-                case "en":
-                    builder.AddField("Message Draxis!", "[**Click For EN Guide**](https://www.icy-veins.com/wow/the-emerald-nightmare-raid)", true);
-                    break;
-                case "nh":
-                    builder.AddField("Message Draxis!", "[**Click For NH Guide**](https://www.icy-veins.com/wow/the-nighthold-raid)", true);
-                    break;
-                case "tos":
-                    builder.AddField("Message Draxis!", "[**Click For TOS Guide**](https://www.icy-veins.com/wow/tomb-of-sargeras-raid)", true);
-                    break;
-                case "antorus":
-                    builder.AddField("Message Draxis!", "[**Click For Antorus Guide**](https://www.icy-veins.com/wow/antorus-the-burning-throne-raid)", true);
-                    break;
-                default:
-                    builder.WithDescription("ERROR WITH INPUT");
-                    error = true;
-                    break;
-            }
-            #endregion
-#region ImageUrl Switch
-            switch (raid.ToString().ToUpper())
-            {
-                case "EN":
-                    builder.ImageUrl = "https://orig00.deviantart.net/7595/f/2016/351/4/3/the_emerald_nightmare_by_artofty-darw2qg.jpg";
-                    break;
-                case "NH":
-                    builder.ImageUrl = "http://wow.zamimg.com/uploads/news/10696-nighthold-to-release-on-january-17th.jpg";
-                    guide = "NH";
-                    break;
-                case "TOS":
-                    builder.ImageUrl = "https://raiderscdnv2-herr1437987216.netdna-ssl.com/wp-content/uploads/2016/07/160722-tomb-of-sargeras.jpg";
-                    guide = "TOS";
-                    break;
-                case "ANTORUS":
-                    builder.ImageUrl = "https://www.icy-veins.com/forums/news/33936-antorus-the-burning-throne-releases-on-nov-28.jpg";
-                    guide = "Antorus";
-                    break;
-                default:
-                    error = true;
-                    break;
-            }
-#endregion
+                builder.AddField("Can't Make it?", "**Need Help?**", true);
 
-            if (error)
-            {
-                
-                await ReplyAsync("Sorry there was an error with your input");
+                #region Link Switch
+                switch (guide.ToLower())
+                {
+                    case "en":
+                        builder.AddField("Message Draxis!", "[**Click For EN Guide**](https://www.icy-veins.com/wow/the-emerald-nightmare-raid)", true);
+                        break;
+                    case "nh":
+                        builder.AddField("Message Draxis!", "[**Click For NH Guide**](https://www.icy-veins.com/wow/the-nighthold-raid)", true);
+                        break;
+                    case "tos":
+                        builder.AddField("Message Draxis!", "[**Click For TOS Guide**](https://www.icy-veins.com/wow/tomb-of-sargeras-raid)", true);
+                        break;
+                    case "antorus":
+                        builder.AddField("Message Draxis!", "[**Click For Antorus Guide**](https://www.icy-veins.com/wow/antorus-the-burning-throne-raid)", true);
+                        break;
+                    default:
+                        builder.WithDescription("ERROR WITH INPUT");
+                        error = true;
+                        break;
+                }
+                #endregion
+                #region ImageUrl Switch
+                switch (raid.ToString().ToUpper())
+                {
+                    case "EN":
+                        builder.ImageUrl = "https://orig00.deviantart.net/7595/f/2016/351/4/3/the_emerald_nightmare_by_artofty-darw2qg.jpg";
+                        break;
+                    case "NH":
+                        builder.ImageUrl = "http://wow.zamimg.com/uploads/news/10696-nighthold-to-release-on-january-17th.jpg";
+                        guide = "NH";
+                        break;
+                    case "TOS":
+                        builder.ImageUrl = "https://raiderscdnv2-herr1437987216.netdna-ssl.com/wp-content/uploads/2016/07/160722-tomb-of-sargeras.jpg";
+                        guide = "TOS";
+                        break;
+                    case "ANTORUS":
+                        builder.ImageUrl = "https://www.icy-veins.com/forums/news/33936-antorus-the-burning-throne-releases-on-nov-28.jpg";
+                        guide = "Antorus";
+                        break;
+                    default:
+                        error = true;
+                        break;
+                }
+                #endregion
+
+                if (error)
+                {
+
+                    await ReplyAsync("Sorry there was an error with your input");
+                }
+                else
+                {
+                    builder.Build(); await channel.SendMessageAsync("", false, builder);
+                }
             }
-            else
+            [Command("social", RunMode = RunMode.Async)]
+            public async Task SocialRaidEvent()
             {
-                builder.Build(); await channel.SendMessageAsync("", false, builder);
+                TimeSpan timeOut = TimeSpan.FromSeconds(60);
+                var channel = (ITextChannel)Context.Client.GetChannel(405383843370106880);
+                string guide; bool error = false;
+                await ReplyAsync("Enter Raid (EN, NH, TOS, Antorus) TOV Not Supported!");
+                var raid = await NextMessageAsync(timeout: timeOut);
+                await ReplyAsync("Enter Date of raid (Example: Monday 22nd Jan)");
+                var date = await NextMessageAsync(timeout: timeOut);
+                await ReplyAsync("Enter time of raid (Example 8pm)");
+                var time = await NextMessageAsync(timeout: timeOut);
+                var legion = Context.Guild.Emotes.First(x => x.Name == "legion");
+
+                var builder = new EmbedBuilder()
+                    .WithTitle($"{legion} New Raid Event Started by {Context.User.Username}")
+                    .WithDescription($"No requirment to join, Just let {Context.User.Username} know you are wanting to join!")
+                    .WithTimestamp(DateTime.UtcNow)
+                    .WithFooter("Powered by Draxbot | Wont Display Correctly on Mobile")
+                    .AddField("Raid:", "**Date:**", true);
+
+                #region Raid Switch
+                switch (raid.ToString().ToUpper())
+                {
+                    case "EN":
+                        builder.AddField("Emerald Nightmare", $"**{date} | {time}**", true);
+                        guide = "EN";
+                        break;
+                    case "NH":
+                        builder.AddField("Nighthold", $"**{date} | {time}**", true);
+                        guide = "NH";
+                        break;
+                    case "TOS":
+                        builder.AddField("Tomb Of Sargaras", $"**{date} | {time}**", true);
+                        guide = "TOS";
+                        break;
+                    case "ANTORUS":
+                        builder.AddField("Antorus The Burning Throne", $"**{date} | {time}**", true);
+                        guide = "Antorus";
+                        break;
+                    default:
+                        guide = "none";
+                        error = true;
+                        break;
+                }
+                #endregion
+
+                builder.AddField("Can't Make it?", "**Need Help?**", true);
+
+                #region Link Switch
+                switch (guide.ToLower())
+                {
+                    case "en":
+                        builder.AddField("Message Draxis!", "[**Click For EN Guide**](https://www.icy-veins.com/wow/the-emerald-nightmare-raid)", true);
+                        break;
+                    case "nh":
+                        builder.AddField("Message Draxis!", "[**Click For NH Guide**](https://www.icy-veins.com/wow/the-nighthold-raid)", true);
+                        break;
+                    case "tos":
+                        builder.AddField("Message Draxis!", "[**Click For TOS Guide**](https://www.icy-veins.com/wow/tomb-of-sargeras-raid)", true);
+                        break;
+                    case "antorus":
+                        builder.AddField("Message Draxis!", "[**Click For Antorus Guide**](https://www.icy-veins.com/wow/antorus-the-burning-throne-raid)", true);
+                        break;
+                    default:
+                        builder.WithDescription("ERROR WITH INPUT");
+                        error = true;
+                        break;
+                }
+                #endregion
+                #region ImageUrl Switch
+                switch (raid.ToString().ToUpper())
+                {
+                    case "EN":
+                        builder.ImageUrl = "https://orig00.deviantart.net/7595/f/2016/351/4/3/the_emerald_nightmare_by_artofty-darw2qg.jpg";
+                        break;
+                    case "NH":
+                        builder.ImageUrl = "http://wow.zamimg.com/uploads/news/10696-nighthold-to-release-on-january-17th.jpg";
+                        guide = "NH";
+                        break;
+                    case "TOS":
+                        builder.ImageUrl = "https://raiderscdnv2-herr1437987216.netdna-ssl.com/wp-content/uploads/2016/07/160722-tomb-of-sargeras.jpg";
+                        guide = "TOS";
+                        break;
+                    case "ANTORUS":
+                        builder.ImageUrl = "https://www.icy-veins.com/forums/news/33936-antorus-the-burning-throne-releases-on-nov-28.jpg";
+                        guide = "Antorus";
+                        break;
+                    default:
+                        error = true;
+                        break;
+                }
+                #endregion
+
+                if (error)
+                {
+
+                    await ReplyAsync("Sorry there was an error with your input");
+                }
+                else
+                {
+                    builder.Build(); await channel.SendMessageAsync("", false, builder);
+                }
             }
         }
     }
-
 }
 
-            
+
+
+
