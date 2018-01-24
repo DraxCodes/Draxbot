@@ -78,7 +78,7 @@ namespace Draxbot.Module
         public async Task InfoYoutube()
         {
             TimeSpan timeOut = TimeSpan.FromSeconds(60);
-            var channel = Context.Client.GetChannel(357719326905860106) as ITextChannel;
+            var channel = Context.Client.GetChannel(405022204024324106) as ITextChannel;
             await ReplyAsync("Enter title");
             var title = await NextMessageAsync(timeout: timeOut);
             await ReplyAsync("Enter descripiton.");
