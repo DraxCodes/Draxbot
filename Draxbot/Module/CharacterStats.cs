@@ -69,7 +69,7 @@ namespace Draxbot.Module
             public async Task OWStats(string s = null)
             {
                 Bot.CommandLog(Context.User.Username, $"OW Stats for {s}");
-                var bronze = new Color(140, 120, 83);
+                var bronze = new Color(69, 10, 10);
                 var silver = new Color(230, 232, 250);
                 var diamond = new Color(238, 252, 255);
                 OWProfile stats;
@@ -125,7 +125,7 @@ namespace Draxbot.Module
 
                     var builder = new EmbedBuilder()
                          .WithFooter("Powered by Draxbot & OW-API", "https://image.ibb.co/mhcU6m/Disocrd_OWIcon.png")
-                         .WithDescription("For more detailed information regarding competitive play, Please try ``!stats ow champion [champion name]``")
+                         .WithDescription("For more detailed information regarding competitive play, Please try ``!stats ow hero [hero name]``")
                          .WithThumbnailUrl(stats.icon)
                          .WithTimestamp(DateTime.UtcNow)
                          .WithUrl($"https://masteroverwatch.com/profile/pc/global/{btag}")
@@ -188,7 +188,7 @@ namespace Draxbot.Module
                     builder.Build(); await ReplyAsync("", false, builder);
                 }
             }
-            [Command("champion", RunMode = RunMode.Async), Summary("Gets overwatch champion data for specific user.")]
+            [Command("hero", RunMode = RunMode.Async), Summary("Gets overwatch hero data for specific user.")]
             public async Task OwStatsChampion(string champion = null)
             {
                 await Context.Channel.TriggerTypingAsync();
@@ -197,7 +197,7 @@ namespace Draxbot.Module
                     var Failbuilder = new EmbedBuilder()
                                .WithTitle("ERROR")
                                .WithFooter("Powered by Draxbot & OW-API", "https://image.ibb.co/mhcU6m/Disocrd_OWIcon.png")
-                               .WithDescription("There seems to be an issue. You didn't supply a valid champion name! Please do the ``!champions`` command find a list of champions. Correct format for command is ``!stats ow champion [Champion Name]``")
+                               .WithDescription("There seems to be an issue. You didn't supply a valid champion name! Please do the ``!champions`` command find a list of champions. Correct format for command is ``!stats ow hero [Hero Name]``")
                                .WithTimestamp(DateTime.UtcNow);
                     Failbuilder.Build(); await ReplyAsync("", false, Failbuilder);
                 }
@@ -209,7 +209,7 @@ namespace Draxbot.Module
                 }
 
                 Bot.CommandLog(Context.User.Username, $"OW Stats for {Context.User.Username}");
-                var bronze = new Color(140, 120, 83);
+                var bronze = new Color(69, 10, 10);
                 var silver = new Color(230, 232, 250);
                 var diamond = new Color(238, 252, 255);
                 var builder = new EmbedBuilder();
@@ -364,7 +364,6 @@ namespace Draxbot.Module
                     int losses = SelectedChampion.game.gamesPlayed - SelectedChampion.game.gamesWon - SelectedChampion.game.gamesTied;
 
                     var dataBuilder = new EmbedBuilder()
-                         .WithTitle($"Overwatch Champion Stats For {stats.name} On {champion}")
                          .WithDescription("Below are the best results you have had in competitive in a single game. This is not average, this is best :)")
                          .WithFooter("Powered by Draxbot & OW-API", "https://image.ibb.co/mhcU6m/Disocrd_OWIcon.png")
                          .WithThumbnailUrl(stats.icon)
@@ -374,6 +373,8 @@ namespace Draxbot.Module
                          .AddField("Playtime & Win %", $"{SelectedChampion.game.timePlayed} | {SelectedChampion.game.winPercentage}", true)
                          .AddField("Wins", SelectedChampion.game.gamesWon.ToString(), true)
                          .AddField("Losses", losses.ToString(), true);
+
+
 
                     #region Embed Champion Specific Extras
 
@@ -487,50 +488,50 @@ namespace Draxbot.Module
 
                     if (rank <= 1499)
                     {
-                        builder.Title = ($"{rank1} OverWatch Stats for {stats.name}");
+                        dataBuilder.Title = ($"{rank1} Overwatch Hero Stats For {stats.name} On {champion}");
                     }
                     else if (rank >= 1500 && rank <= 1999)
                     {
-                        builder.WithTitle($"{rank2} OverWatch Stats for {stats.name}");
+                        dataBuilder.WithTitle($"{rank2} Overwatch Hero Stats For {stats.name} On {champion}");
                     }
                     else if (rank >= 2000 && rank <= 2499)
                     {
-                        builder.WithTitle($"{rank3} OverWatch Stats for {stats.name}");
+                        dataBuilder.WithTitle($"{rank3} Overwatch Hero Stats For {stats.name} On {champion}");
                     }
                     else if (rank >= 2500 && rank <= 2999)
                     {
-                        builder.WithTitle($"{rank4} OverWatch Stats for {stats.name}");
+                        dataBuilder.WithTitle($"{rank4} Overwatch Hero Stats For {stats.name} On {champion}");
                     }
                     else if (rank >= 3000 && rank <= 3499)
                     {
-                        builder.WithTitle($"{rank5} OverWatch Stats for {stats.name}");
+                        dataBuilder.WithTitle($"{rank5} Overwatch Hero Stats For {stats.name} On {champion}");
                     }
                     else if (rank >= 3500 && rank <= 3999)
                     {
-                        builder.WithTitle($"{rank6} OverWatch Stats for {stats.name}");
+                        dataBuilder.WithTitle($"{rank6} Overwatch Hero Stats For {stats.name} On {champion}");
                     }
                     else if (rank >= 4000)
                     {
-                        builder.WithTitle($"{rank7} OverWatch Stats for {stats.name}");
+                        dataBuilder.WithTitle($"{rank7} Overwatch Hero Stats For {stats.name} On {champion}");
                     }
                     #endregion
 
                     #region Embed Color Ranks
                     if (rank <= 1499)
                     {
-                        builder.Color = bronze;
+                        dataBuilder.Color = bronze;
                     }
                     else if (rank >= 1500 && rank <= 1999)
                     {
-                        builder.Color = silver;
+                        dataBuilder.Color = silver;
                     }
                     else if (rank >= 2000 && rank <= 2499)
                     {
-                        builder.Color = Color.Gold;
+                        dataBuilder.Color = Color.Gold;
                     }
                     else if (rank >= 2500)
                     {
-                        builder.Color = diamond;
+                        dataBuilder.Color = diamond;
                     }
                     #endregion
 

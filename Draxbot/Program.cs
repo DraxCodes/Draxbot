@@ -18,6 +18,7 @@ namespace Draxbot
         static void Main(string[] args)
         => new Bot().StartAsynq().GetAwaiter().GetResult();
 
+        private string status = "Online";
         private DiscordSocketClient _client;
         private string _token;
         private CommandService commands;
@@ -45,6 +46,7 @@ namespace Draxbot
 
             _client.MessageReceived += HandleCommandAsync;
 
+            await _client.SetGameAsync(status);
             //_handler = new CommandHandler(_client);
 
             await Task.Delay(-1);

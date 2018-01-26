@@ -111,7 +111,7 @@ namespace Draxbot.Module
             public async Task RaidEvent()
             {
                 TimeSpan timeOut = TimeSpan.FromSeconds(60);
-                var channel = (ITextChannel)Context.Client.GetChannel(405383843370106880);
+                var channel = (ITextChannel)Context.Client.GetChannel(405022204024324106);
                 string guide; bool error = false;
                 await ReplyAsync("Enter Raid (EN, NH, TOS, Antorus) TOV Not Supported!");
                 var raid = await NextMessageAsync(timeout: timeOut);
@@ -119,6 +119,9 @@ namespace Draxbot.Module
                 var date = await NextMessageAsync(timeout: timeOut);
                 await ReplyAsync("Enter time of raid (Example 8pm)");
                 var time = await NextMessageAsync(timeout: timeOut);
+                await ReplyAsync("Enter any extra Details, put ``None`` if you don't need top add extra details!");
+                var details = await NextMessageAsync(timeout: timeOut);
+
                 var legion = Context.Guild.Emotes.First(x => x.Name == "legion");
 
                 var builder = new EmbedBuilder()
@@ -201,6 +204,11 @@ namespace Draxbot.Module
                 }
                 #endregion
 
+                if (details.ToString().ToLower() != "none")
+                {
+                    builder.AddField("Extra Details", $"{details}");
+                }
+
                 if (error)
                 {
 
@@ -215,7 +223,7 @@ namespace Draxbot.Module
             public async Task SocialRaidEvent()
             {
                 TimeSpan timeOut = TimeSpan.FromSeconds(60);
-                var channel = (ITextChannel)Context.Client.GetChannel(405383843370106880);
+                var channel = (ITextChannel)Context.Client.GetChannel(405022204024324106);
                 string guide; bool error = false;
                 await ReplyAsync("Enter Raid (EN, NH, TOS, Antorus) TOV Not Supported!");
                 var raid = await NextMessageAsync(timeout: timeOut);
@@ -223,11 +231,13 @@ namespace Draxbot.Module
                 var date = await NextMessageAsync(timeout: timeOut);
                 await ReplyAsync("Enter time of raid (Example 8pm)");
                 var time = await NextMessageAsync(timeout: timeOut);
+                await ReplyAsync("Enter any extra Details, put ``None`` if you don't need top add extra details!");
+                var details = await NextMessageAsync(timeout: timeOut);
                 var legion = Context.Guild.Emotes.First(x => x.Name == "legion");
 
                 var builder = new EmbedBuilder()
                     .WithTitle($"{legion} New Raid Event Started by {Context.User.Username}")
-                    .WithDescription($"No requirment to join, Just let {Context.User.Username} know you are wanting to join!")
+                    .WithDescription($"No requirement to join, Just let {Context.User.Username} know you are wanting to join!")
                     .WithTimestamp(DateTime.UtcNow)
                     .WithFooter("Powered by Draxbot | Wont Display Correctly on Mobile")
                     .AddField("Raid:", "**Date:**", true);
@@ -304,6 +314,11 @@ namespace Draxbot.Module
                         break;
                 }
                 #endregion
+
+                if (details.ToString().ToLower() != "none")
+                {
+                    builder.AddField("Extra Details", $"{details}");
+                }
 
                 if (error)
                 {
