@@ -70,5 +70,30 @@ namespace Draxbot.Module
             Character mPlusData = JsonConvert.DeserializeObject<Character>(jsonData);
             return mPlusData;
         }
+
+        [Command("affix", RunMode = RunMode.Async)]
+        public async Task Affixes()
+        {
+            var affixData = Afixes("eu");
+            var replyBuilder = new EmbedBuilder()
+                .WithTitle("This Weeks Mythic+ Affixes")
+                .WithDescription($"[{affixData.affix_details[0].name}]({affixData.affix_details[0].wowhead_url}) | [{affixData.affix_details[1].name}]({affixData.affix_details[1].wowhead_url}) | [{affixData.affix_details[2].name}]({affixData.affix_details[2].wowhead_url})")
+                .WithFooter($"Powered by Draxbot & Raider.IO", "https://media.forgecdn.net/avatars/117/23/636399071197048271.png")
+                .WithTimestamp(DateTime.UtcNow)
+                .WithThumbnailUrl("https://i.imgur.com/EVMAxGc.png")
+                .AddField(affixData.affix_details[0].name, $"{affixData.affix_details[0].description}")
+                .AddField(affixData.affix_details[1].name, $"{affixData.affix_details[1].description}")
+                .AddField(affixData.affix_details[2].name, $"{affixData.affix_details[2].description}");
+            replyBuilder.Build(); await ReplyAsync("", false, replyBuilder);
+        }
+
+        private static Afixes Afixes(string region)
+        {
+            string jsonDataUrl = ($"https://raider.io/api/v1/mythic-plus/affixes?region={region}");
+            string jsonData = null;
+            jsonData = new WebClient().DownloadString(jsonDataUrl);
+            Afixes AffixData = JsonConvert.DeserializeObject<Afixes>(jsonData);
+            return AffixData;
+        }
     }
 }
