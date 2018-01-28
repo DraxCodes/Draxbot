@@ -35,6 +35,6 @@ User :  ``8pm ST``
 
 Bot  :  ``Enter any extra Details, put None if you don't need top add extra details!``
 
-User :  If you have no description for the raid you put ``none`` If you have a descripiton you simply type it here.
+User :  If you have no description for the raid you put ``none`` Otherwise you simply type it here.
 
 #### This example works for the other two commands as-well ``!news raid social`` & ``!news guild``
