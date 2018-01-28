@@ -20,13 +20,21 @@ This command allows Mod or higher to post events to a desired channel and displa
 Everything about the news post is editable and raids will change based on what the current expasion has.
 #### Example Usage:
 User :  ``!news raid main``
+
 Bot  :  ``Enter Raid (EN, NH, TOS, Antorus) TOV Not Supported!``
+
 User :  ``Antorus``
+
 Bot  :  ``Enter Date of raid (Example: Monday 22nd Jan)``
+
 User :  ``Monday 29th Jan``
+
 Bot  :  ``Enter time of raid (Example 8pm ST)``
+
 User :  ``8pm ST``
+
 Bot  :  ``Enter any extra Details, put None if you don't need top add extra details!``
+
 User :  If you have no description for the raid you put ``none`` If you have a descripiton you simply type it here.
 
 =====
