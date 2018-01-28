@@ -38,3 +38,15 @@ Bot  :  ``Enter any extra Details, put None if you don't need top add extra deta
 User :  If you have no description for the raid you put ``none`` Otherwise you simply type it here.
 
 #### This example works for the other two commands as-well ``!news raid social`` & ``!news guild``
+
+# TODO
+
+* New overwatch stats information incoming for overwatch lovers. As-well as champion specific stats for overwatch too.
+* A new and updated better way of checking mythic+ information. 
+* More moderation commands for handleing moderator type tasks (Kick/Bans).
+* Further improvment of the class discords commands (Adding in more discord results such as mythic+, Eurogroup, Overwatch Discords, Simcraft Discords, etc).
+* A new roster command and an events command to be added (Raid events, Mythic+ events, Guild events in general).
+* Guild Progress command to be added (Displays the guild progress as-well as any kill videos).
+* Raid boss mechanics commands to be added and kept up to date for easy access to; How to videos, Mechanic text tutorials from websites like WowHead.
+* News and updates commands for WoW and possibly other sources.
+* More features to come too
