@@ -2,7 +2,7 @@
 
 #### Draxbot is a discord chat bot with custom commands to handle server moderation as-well as various World of Warcraft & Overwatch commands. It is currently running the Phoenix Arisng Discord Server!
 
-## Commands List
+# Commands List
 
 | Commands                       | Example               | Required Rank  |
 | ------------------------------ |:---------------------:| --------------:|
@@ -15,7 +15,7 @@
 | !news raid guild  {Info Below} | {Find Below}          | Any            |
 | !wowhead {Search}              | !wowhead Dk Guide     | Any            |
 
-### !news raid (main/social)
+## !news raid (main/social)
 This command allows Mod or higher to post events to a desired channel and display the events in an Embed. (Example Below)
 Everything about the news post is editable and raids will change based on what the current expasion has.
 #### Example Usage:
@@ -37,4 +37,4 @@ Bot  :  ``Enter any extra Details, put None if you don't need top add extra deta
 
 User :  If you have no description for the raid you put ``none`` If you have a descripiton you simply type it here.
 
-=====
+#### This example works for the other two commands as-well ``!news raid social`` & ``!news guild``
