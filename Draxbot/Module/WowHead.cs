@@ -48,7 +48,7 @@ namespace Draxbot.Module
                     replyBuilder
                         .WithTitle($"{d.title}")
                         .WithDescription($"{sBuilderSnippet}")
-                        .WithUrl($"{d.formattedUrl.ToString().Insert(0, "http://")}");
+                        .WithUrl($"{d.link}");
                     foreach (var item in d.pagemap.cse_thumbnail)
                     {
                         replyBuilder.WithThumbnailUrl(item.src);

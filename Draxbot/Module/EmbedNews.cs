@@ -126,7 +126,7 @@ namespace Draxbot.Module
 
                 var builder = new EmbedBuilder()
                     .WithTitle($"{legion} New Raid Event Started by {Context.User.Username}")
-                    .WithDescription("All Radiers in the Main Raid Team are REQUIRED to join!")
+                    .WithDescription("All Raiders in the Main Raid Team are REQUIRED to join!")
                     .WithTimestamp(DateTime.UtcNow)
                     .WithFooter("Powered by Draxbot | Wont Display Correctly on Mobile")
                     .AddField("Raid:", "**Date:**", true);

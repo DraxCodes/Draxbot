@@ -1,0 +1,284 @@
+{
+  "classes": {
+    "shaman": {
+      "Specs": {
+        "Restoration": {
+          "Stats": "Crit > Versatility = Mastery = Haste > Intellect",
+          "Title": "Resto Shaman Basics",
+          "Description": "Restoration Shaman is an extremely flexible specialization that truly shines when healing groups of players that are clumped together.",
+          "Link": "https://www.icy-veins.com/wow/restoration-shaman-pve-healing-guide"
+        },
+        "Enhacement": {
+          "Stats": "Haste = Mastery > Versatility > Crit > Agility",
+          "Title": "Enhancment Shaman Basics",
+          "Description": "Enhancement Shaman is a specialization that is very flexible and streamlined, with a much faster pace of play that can be applied in a variety of ways.",
+          "Link": "https://www.icy-veins.com/wow/enhancement-shaman-pve-dps-guide"
+        },
+        "Elemental": {
+          "Stats": "Intellect > Crit > Mastery > Haste > Versatility",
+          "Title": "Elemental Shaman Basics",
+          "Description": "Elemental Shaman is a damage dealing spellcaster with a straightforward but flexible toolkit. Elemental Shamans can approach a multitude of environments without feeling compromised.",
+          "Link": "https://www.icy-veins.com/wow/elemental-shaman-pve-dps-guide"
+        }
+      },
+      "tier_token": "Warrior, Monk, Hunter, Shaman"
+    },
+    "death knight": {
+      "Specs": {
+        "Frost": {
+          "Stats": "Strength > Mastery (40%) > Haste (30%) > Crit (30%) > Critical Strike = Haste > Versatility",
+          "Title": "Frost DK Basics",
+          "Description": "The Frost specialisation (which now only allows for dual-wielding One-Handed Weapons) provides reasonable single target and AoE DPS, and it seems to be on par with Unholy in terms of performance.",
+          "Link": "https://www.icy-veins.com/wow/frost-death-knight-pve-dps-guide"
+        },
+        "Unholy": {
+          "Stats": "Strength > Haste (30%) > Mastery > Crit = Vers (SIM YOURSELF) > Haste",
+          "Title": "Unholy DK Basics",
+          "Description": "The Unholy specialisation currently provides excellent single target damage, as well as excellent cleave damage against 2-3 targets. It is better in this regard when compared to many other specialisations.",
+          "Link": "https://www.icy-veins.com/wow/unholy-death-knight-pve-dps-guide"
+        },
+        "Blood": {
+          "Stats": "Strength > Haste > Versatility > Crit > Mastery",
+          "Title": "Blood DK Basics",
+          "Description": "The Blood specialisation relies on self-healing, taking more damage (on average) than other tanks and healing more to make up for this.",
+          "Link": "https://www.icy-veins.com/wow/blood-death-knight-pve-tank-guide"
+        }
+      },
+      "tier_token": "Rouge, DK, Mage, Druid"
+    },
+    "demon hunter": {
+      "Specs": {
+        "Havoc": {
+          "Stats": "Crit > Mastery > Versatility > Haste > Agility",
+          "Title": "Havoc DH Basics",
+          "Description": "Havoc, the DPS spec of the newly introduced Demon Hunter class in Legion is a resource based melee specialization with a focus on Global Cooldown locked gameplay with a builder spender style.",
+          "Link": "https://www.icy-veins.com/wow/havoc-demon-hunter-pve-dps-guide"
+        },
+        "Vengence": {
+          "Stats": "Agility > Haste (until 20%) >= Mastery > Versatility > Crit > Haste",
+          "Title": "Vengence DH Basics",
+          "Description": "Demon Hunters are the kings of mobility in raids. In general, they can move around more and more quickly than many other specs, thanks to Infernal Strike as well as various talents that aid their mobility.",
+          "Link": "https://www.icy-veins.com/wow/vengeance-demon-hunter-pve-tank-guide"
+        }
+      },
+      "tier_token": "Priest, Pally, Warlock, DH"
+    },
+    "druid": {
+      "Specs": {
+        "Ballance": {
+          "Stats": "Mastery = Haste > Critical Strike = Versatility > Intellect",
+          "Title": "Balance Druid Basics",
+          "Description": "Balance Druids shine in multiple target fights due to their ability to multi-DoT, and they also have good mobility due to their instant cast spells.",
+          "Link": "https://www.icy-veins.com/wow/balance-druid-pve-dps-guide"
+        },
+        "Feral": {
+          "Stats": "Vers > Crit > Haste > Agility > Mastery",
+          "Title": "Feral Druid Basics",
+          "Description": "Feral, the Melee DPS specialisation for Druids, forms its core gameplay around balancing two separate resources whilst also leveraging those to apply powerful Bleed Damage over Time effects on targets.",
+          "Link": "https://www.icy-veins.com/wow/feral-druid-pve-dps-guide"
+        },
+        "Guardian": {
+          "Stats": "Armor > Stamina > Versatility > Mastery > Haste > Crit > Agility",
+          "Title": "Guardian Druid Basics",
+          "Description": "Guardian Druid tanks are currently fairly well balanced, being equipped to deal with any incoming damage types, be they Physical or magic. Guardian Druids offer a high amount of utility to any raid or dungeon group.",
+          "Link": "https://www.icy-veins.com/wow/guardian-druid-pve-tank-guide"
+        },
+        "Restoration": {
+          "Raiding": "Mastery > Haste >= Critical Strike > Verastility > Intellect",
+          "Mythic+": "Mastery > Haste > Crit > Vers > Intellect",
+          "Title": "Resto Druid Basics",
+          "Description": "Restoration Druids specialise in maintaining a steady stream of healing on the raid, which they do primarily through their HoTs.",
+          "Link": "https://www.icy-veins.com/wow/restoration-druid-pve-healing-stat-priority"
+        }
+      },
+      "tier_token": "Rouge, DK, Mage, Druid"
+    },
+    "hunter": {
+      "Specs": {
+        "Beast Mastery": {
+          "Stats": "Crit > Haste > Mastery > Versatility",
+          "Title": "Beast Mastery Hunter Basics",
+          "Description": "Beast Mastery's biggest strength is very good single-target burst damage, its ease of play, and its unlimited movement.",
+          "Link": "https://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-guide"
+        },
+        "Marksmanship": {
+          "Stats": "Mastery > Crit > Haste > Versatility",
+          "Title": "Marksmanship Hunter Basics",
+          "Description": "Damage output is its biggest strength, with strong utility in abilities like Bursting Shot to sweeten the deal.",
+          "Link": "https://www.icy-veins.com/wow/marksmanship-hunter-pve-dps-guide"
+        },
+        "Survival": {
+          "Stats": "Haste > Critical Strike >= Versatility > Mastery",
+          "Title": "Survival Hunter Basics",
+          "Description": "Survival is the Melee Hunter spec. It has a versatile toolkit with lots of Crowd Control potential, very high burst AoE damage potential and average single-target.",
+          "Link": "https://www.icy-veins.com/wow/survival-hunter-pve-dps-guide"
+        }
+      },
+      "tier_token": "Warrior, Monk, Hunter, Shaman"
+    },
+    "mage": {
+      "Specs": {
+        "Frost": {
+          "Stats": "Versatility >= Haste > Crit (30%) > Intellect > Mastery > Crit",
+          "Title": "Frost Mage Basics",
+          "Description": "The Frost specialization has always excelled at limiting enemy movement while dealing reliable and predictable damage output.",
+          "Link": "https://www.icy-veins.com/wow/frost-mage-pve-dps-guide"
+        },
+        "Fire": {
+          "Stats": "Mastery > Haste >= Versatility > Crit",
+          "Title": "Fire Mage Basics",
+          "Description": " Fire cleaves extremely efficiently on stacked targets, gaining overall damage without sacrificing any single target at all.",
+          "Link": "https://www.icy-veins.com/wow/fire-mage-pve-dps-guide"
+        },
+        "Arcane": {
+          "Stats": "Haste > Versatility > Crit > Mastery > Intellect",
+          "Title": "Arcane Mage Basics",
+          "Description": "The Arcane specialization is a great jack of all trades specialization in Legion. It continues to provide great burst damage and solid sustained damage on single target encounters, and in Legion it now boasts impressive AoE as well.",
+          "Link": "https://www.icy-veins.com/wow/arcane-mage-pve-dps-guide"
+        }
+      },
+      "tier_token": "Rouge, DK, Mage, Druid"
+    },
+    "monk": {
+      "Specs": {
+        "Brewmaster": {
+          "Stats": "Haste(14.3%) > Mastery = Critical Strike = Versatility",
+          "Title": "Brewmaster Monk Basics",
+          "Description": "Brewmasters do not rely very much on avoiding damage through dodging and parrying attacks. Instead, have an additional way of dealing with incoming damage, an ability called Stagger.",
+          "Link": "https://www.icy-veins.com/wow/brewmaster-monk-pve-tank-guide"
+        },
+        "Mistweaver": {
+          "Stats": "Intellect > Crit (35%) > Versatility > Haste > Mastery",
+          "Title": "Mistweaver Monk Basics",
+          "Description": "The Mistweaver specialisation is versatile, and different talent choices can allow it to fit the requirements of the raid very well. Mistweavers can, therefore, heal both tanks and the raid very well.",
+          "Link": "https://www.icy-veins.com/wow/mistweaver-monk-pve-healing-guide"
+        },
+        "Windwalker": {
+          "Stats": "Agility > Mastery > Crit > Versatility > Haste",
+          "Title": "Windwalker Monk Basics",
+          "Description": "The Windwalker specialisation has strong priority target damage, very good AoE damage, and smooth rotations.",
+          "Link": "https://www.icy-veins.com/wow/windwalker-monk-pve-dps-guide"
+        }
+      },
+      "tier_token": "Warrior, Monk, Hunter, Shaman"
+    },
+    "paladin": {
+      "Specs": {
+        "Ret": {
+          "Stats": "Mastery >= Haste > Versatility >= Critical Strike = Strength",
+          "Title": "Ret Paladin Basics",
+          "Description": "In both single target and AoE DPS, the Retribution specialisation is currently performing well, compared to most other classes. While it is not at the top of the DPS rankings, it is in a good place.",
+          "Link": "https://www.icy-veins.com/wow/retribution-paladin-pve-dps-guide"
+        },
+        "Holy": {
+          "Stats": "Intellect > Crit (50%) > Mastery > Versatility > Haste",
+          "Title": "Holy Paladin Basics",
+          "Description": "Holy Paladins specialise in tank and single-target healing, with this being their primary role. They possess several tools that help them mitigate or avoid damage, both on themselves and on other raid members.",
+          "Link": "https://www.icy-veins.com/wow/holy-paladin-pve-healing-guide"
+        },
+        "Protection": {
+          "Stats": "Haste > Versatility > Mastery > Crit",
+          "Title": "Protection Paladin Basics",
+          "Description": "As a Protection Paladin, you can expect to perform the role of a solid and reliable tank. In general, your damage intake will be relatively smooth, with many attacks being blocked by your shield or softened by your strong active mitigation.",
+          "Link": "https://www.icy-veins.com/wow/protection-paladin-pve-tank-guide"
+        }
+      },
+      "tier_token": "Priest, Pally, Warlock, DH"
+    },
+    "priest": {
+      "Specs": {
+        "Disc": {
+          "Stats": "Intellect > Haste > Crit > Mastery > Versatility",
+          "Title": "Disc Priest Basics",
+          "Description": "The Discipline specialisation relies on healing players through dealing damage (thanks to the Atonement passive), but also has traditional heals and absorption spells.",
+          "Link": "https://www.icy-veins.com/wow/discipline-priest-pve-healing-guide"
+        },
+        "Holy": {
+          "Stats": "Intellect > Mastery > Crit > Haste > Versatility",
+          "Title": "Holy Priest Basics",
+          "Description": "The Holy specialisation allows for smooth and very strong AoE/raid healing, and it performs very well in terms of single target healing as well.",
+          "Link": "https://www.icy-veins.com/wow/holy-priest-pve-healing-guide"
+        },
+        "Shadow": {
+          "Stats": "Haste > Crit > Mastery > Versatility > Intellect",
+          "Title": "Shadow Priest Basics",
+          "Description": "The Shadow specialization is currently able to deal medium ranged single-target damage and high sustained multi-DoT damage. It presents players with a complex rotation that is very challenging but also very rewarding.",
+          "Link": "https://www.icy-veins.com/wow/shadow-priest-pve-dps-guide"
+        }
+      },
+      "tier_token": "Priest, Pally, Warlock, DH"
+    },
+    "rogue": {
+      "Specs": {
+        "Subtlety": {
+          "Stats": "Agility > Mastery >= Versatility > Crit > Haste",
+          "Title": "Subtlety Rogue Basics",
+          "Description": "Subtlety Rogues continue to provide strong single-target pressure, but it now brings respectable AoE to the table as well. Much of the rotation involves actively shifting between two stances, in and out of Stealth.",
+          "Link": "https://www.icy-veins.com/wow/subtlety-rogue-pve-dps-guide"
+        },
+        "Assassination": {
+          "Stats": "Agility > Mastery > Versatility > Crit > Haste",
+          "Title": "Assassination Rogue Basics",
+          "Description": "Assassination Rogues deal damage through the application and empowerment of poison and bleed effects. The damage toolkit of Assassination is somewhat limited, mainly focusing on dealing single target damage over a long period.",
+          "Link": "https://www.icy-veins.com/wow/assassination-rogue-pve-dps-guide"
+        },
+        "Outlaw": {
+          "Stats": "Versatility >= Haste > Agility > Crit > Mastery",
+          "Title": "Outlaw Rogue Basics",
+          "Description": "Just like Combat, Outlaw is a fantastic jack of all trades that can comfortably handle any situation or fight type. Between the three Rogue specializations, Outlaw is the most effective in situations involving heavy cleave or AoE.",
+          "Link": "https://www.icy-veins.com/wow/outlaw-rogue-pve-dps-guide"
+        }
+      },
+      "tier_token": "Rouge, DK, Mage, Druid"
+    },
+    "warlock": {
+      "Specs": {
+        "Demonology": {
+          "Stats": "Haste > Critical Strike = Mastery > Intelect > Verastility",
+          "Title": "Demonology Warlock Basics",
+          "Description": "Demonology is a very procedural specialization that focuses on sustained damage, though it can deal some impressive burst AoE through the use of certain talents.",
+          "Link": "https://www.icy-veins.com/wow/demonology-warlock-pve-dps-guide"
+        },
+        "Affliction": {
+          "Stats": "Mastery > Haste > Crit > Versatility > Intellect",
+          "Title": "Affliction Warlock Basics",
+          "Description": "Affliction Warlocks excel at sustaining high single-target and multiple-target damage. Most of your damage comes from the application of harmful damage over time effects (DoTs).",
+          "Link": "https://www.icy-veins.com/wow/affliction-warlock-pve-dps-guide"
+        },
+        "Destruction": {
+          "Stats": "Haste > Crit > Intellect > Versatility > Mastery",
+          "Title": "Destruction Warlock Basics",
+          "Description": "This specialization provides exceptionally strong and efficient 2 target cleave and is not particularly gear reliant to pump out meaningful numbers.",
+          "Link": "https://www.icy-veins.com/wow/destruction-warlock-pve-dps-guide"
+        }
+      },
+      "tier_token": "Priest, Pally, Warlock, DH"
+    },
+    "Warrior": {
+      "Specs": {
+        "Arms": {
+          "Stats": "Mastery > Haste = Versatility = Critical Strike > Strength ",
+          "Title": "Arms Warrior Basics",
+          "Description": "Arms has a strong single-target orientation, tied to small windows of high damage as frequently as possibly by trying to actively reset uses through Tactician.",
+          "Link": "https://www.icy-veins.com/wow/arms-warrior-pve-dps-guide"
+        },
+        "Fury": {
+          "Stats": "Haste > Mastery > Versatility > Crit > Strength",
+          "Title": "Fury Warrior Basics",
+          "Description": "Boasting very strong sustained damage with frequent burst windows and a robust toolkit through talents allowing you to tailor your output for different situations, it is a very powerful and very versatile Melee Specialization.",
+          "Link": "https://www.icy-veins.com/wow/fury-warrior-pve-dps-guide"
+        },
+        "Protection": {
+          "Stats": "Strength > Haste > Mastery >= Versatility > Crit",
+          "Title": "Protection Warrior Basics",
+          "Description": "Protection Warriors have excellent mobility during encounters, and shine in fights where there are many adds. Due to their blocking potential, the damage that they take throughout fights is very smooth and predictable, and easy to heal.",
+          "Link": "https://www.icy-veins.com/wow/protection-warrior-pve-tank-guide"
+        }
+      },
+      "tier_token": "Warrior, Monk, Hunter, Shaman"
+    },
+    "default": {
+      "reply": "There seems to have been an error, Contact Draxis about this please."
+    }
+  }
+}

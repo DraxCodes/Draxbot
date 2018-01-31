@@ -8,4 +8,3 @@ C:\Users\Draxis\source\repos\Draxbot_Solution\Draxbot\obj\Release\netcoreapp2.0\
 C:\Users\Draxis\source\repos\Draxbot_Solution\Draxbot\obj\Release\netcoreapp2.0\Draxbot.AssemblyInfo.cs
 C:\Users\Draxis\source\repos\Draxbot_Solution\Draxbot\obj\Release\netcoreapp2.0\Draxbot.dll
 C:\Users\Draxis\source\repos\Draxbot_Solution\Draxbot\obj\Release\netcoreapp2.0\Draxbot.pdb
-C:\Users\Draxis\source\repos\Draxbot_Solution\Draxbot\obj\Release\netcoreapp2.0\Draxbot.csprojResolveAssemblyReference.cache
