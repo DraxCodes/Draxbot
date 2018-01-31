@@ -23,7 +23,7 @@
       },
       "tier_token": "Warrior, Monk, Hunter, Shaman"
     },
-    "death knight": {
+    "deathknight": {
       "Specs": {
         "Frost": {
           "Stats": "Strength > Mastery (40%) > Haste (30%) > Crit (30%) > Critical Strike = Haste > Versatility",
@@ -46,7 +46,7 @@
       },
       "tier_token": "Rouge, DK, Mage, Druid"
     },
-    "demon hunter": {
+    "demonhunter": {
       "Specs": {
         "Havoc": {
           "Stats": "Crit > Mastery > Versatility > Haste > Agility",

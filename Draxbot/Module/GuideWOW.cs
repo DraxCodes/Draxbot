@@ -279,7 +279,8 @@ namespace Draxbot.Module
                     .WithFooter("Powered By DraxBot & Icy Veins | See a problem? PM Draxis")
                     .AddField("Stat Priority", $"{results.Stats}")
                     .AddField("Shares Tier Tokens With", tierToken)
-                    .AddField("Links", $"[Link To Icy Veins Guide]({results.Link})")
+                    .AddField("Note", "Remember these are only basic stat priorities, you should ALWAYS Sim yourself if possible too!")
+                    .AddField("Links", $"[Link To Icy Veins Guide]({results.Link}) | [Link To RaidBot, Sim yourself!](https://www.raidbots.com/)")
                     .WithThumbnailUrl("https://cdn2.iconfinder.com/data/icons/basic-office-snippets/170/Basic_Office-9-512.png");
 
                 replyBuilder.Build(); await ReplyAsync("", false, replyBuilder);

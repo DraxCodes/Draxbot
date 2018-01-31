@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_LastSelectedProfileId>C:\Users\Draxis\source\repos\Draxbot_Solution\Draxbot\Properties\PublishProfiles\Draxbot 1.2.pubxml</_LastSelectedProfileId>
+    <_LastSelectedProfileId>C:\Users\Draxis\source\repos\Draxbot_Solution\Draxbot\Properties\PublishProfiles\Draxbot 2.0.pubxml</_LastSelectedProfileId>
     <ActiveDebugProfile>Draxbot</ActiveDebugProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
