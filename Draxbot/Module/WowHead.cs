@@ -25,7 +25,7 @@ namespace Draxbot.Module
             {
                 var Failbuilder = new EmbedBuilder()
                                .WithTitle("ERROR")
-                               .WithFooter("Powered by Draxbot & OW-API", "https://image.ibb.co/mhcU6m/Disocrd_OWIcon.png")
+                               .WithFooter("Powered by Draxbot & Wowhead", "http://www.theabandonedones.com/images/wowhead-1.png")
                                .WithDescription("There seems to be an issue with your command ``!wowhead``. Please ensure you are using it correcty: ``!wowhead [search]``")
                                .WithTimestamp(DateTime.UtcNow);
                 Failbuilder.Build(); await ReplyAsync("", false, Failbuilder);
